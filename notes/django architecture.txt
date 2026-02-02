@@ -1,0 +1,13 @@
+django architecture
+
+user interacts with browser
+browser makes a request to django server
+django server makes a request to database
+django server makes a request to template
+django server makes a request to static files
+django server makes a request to media files
+browser makes a response to django server
+django server makes a response to browser
+
+
+Follows MVT architecture (model, view, template)

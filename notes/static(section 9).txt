@@ -1,0 +1,7 @@
+## Static ##
+
+- Static files are used to store the static files of the website
+- Static files are stored in the static folder
+- Static files are used to store the css, js, images, etc
+- Static files are used to store the media files of the website
+- Static files are used to store the media files of the website

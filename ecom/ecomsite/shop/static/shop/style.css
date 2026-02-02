@@ -1,0 +1,83 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 20px;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  overflow: hidden; /* Ensures image rounded corners follow card */
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  height: 50px; /* Two lines height approximation */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Price Styling */
+.product-price {
+  color: #26a69a; /* Teal color */
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.product-discount-price {
+  text-decoration: line-through;
+  color: #9e9e9e; /* Grey color */
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.product-category {
+  color: #757575;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  font-style: italic;
+}
+.card-action {
+  margin-top: 15px;
+}
+.btn-view {
+  width: 100%;
+  border-radius: 20px;
+  font-weight: 600;
+}

@@ -1,0 +1,42 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'newapp/style.css' %}" />
+
+<form action="" method="GET">
+  <input type="text" name="movie_name" placeholder="Search movies..." />
+  <button type="submit">Search</button>
+</form>
+
+<div class="movie-container">
+  {% for movie in page_obj %}
+  <div class="movie-card">
+    <h3 class="movie-title">{{ movie.name }}</h3>
+    <div class="movie-genre">{{ movie.genre }}</div>
+
+    <div class="movie-details">
+      <span class="rating-badge">★ {{ movie.rating }}</span>
+      <span class="duration">{{ movie.duration }} min</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- PAGINATION -->
+<div class="pagination">
+  <span class="step-links">
+    <!-- PREVIOUS -->
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    <!-- CURRENT PAGE -->
+    <span class="current">
+      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+    </span>
+
+    <!-- NEXT -->
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+    {% endif %}
+  </span>
+</div>
+<!-- END PAGINATION -->

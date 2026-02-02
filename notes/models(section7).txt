@@ -1,0 +1,13 @@
+## Models in Django ##
+
+Django has ORM which eliminates the need for writing raw SQL queries.
+
+- Models are blueprints to create database tables
+- in django models are just python classes
+- models are defined in the models.py file
+- models are used to create database tables
+- models are used to store data in the database
+- models are used to retrieve data from the database
+- models are used to update data in the database
+- models are used to delete data from the database
+- not only css, but also js, images, etc are stored in the static folder

@@ -1,0 +1,4 @@
+## Authentication ##
+
+- Allowing users to register/login/logout
+- Restricting access to certain pages

@@ -1,0 +1,182 @@
+[
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "name": "Rolex Submariner Date",
+      "description": "The quintessential divers' watch, featuring a Cerachrom bezel and Oyster bracelet.",
+      "price": "10500.00",
+      "discount_price": "14200.00",
+      "image": "https://images.rolex.com/submariner-date.jpg",
+      "category": "Rolex"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "name": "Audemars Piguet Royal Oak",
+      "description": "The octagonal bezel with hexagonal screws and the 'Tapisserie' dial make this an icon.",
+      "price": "45000.00",
+      "discount_price": "52000.00",
+      "image": "https://images.audemarspiguet.com/royal-oak-blue.jpg",
+      "category": "Audemars Piguet"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+      "name": "Patek Philippe Nautilus 5711",
+      "description": "The most sought-after luxury sports watch in the world, featuring a gradient blue dial.",
+      "price": "120000.00",
+      "discount_price": "155000.00",
+      "image": "https://images.patek.com/nautilus-5711.jpg",
+      "category": "Patek Philippe"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+      "name": "Rolex Daytona 'Panda'",
+      "description": "The legendary cosmograph with a white dial and black ceramic tachymeter bezel.",
+      "price": "15100.00",
+      "discount_price": "32000.00",
+      "image": "https://images.rolex.com/daytona-panda.jpg",
+      "category": "Rolex"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 5,
+    "fields": {
+      "name": "Vacheron Constantin Overseas",
+      "description": "A refined sports watch with a stunning blue dial and Maltese cross-inspired bracelet.",
+      "price": "25000.00",
+      "discount_price": "29500.00",
+      "image": "https://images.vacheron-constantin.com/overseas.jpg",
+      "category": "Vacheron Constantin"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 6,
+    "fields": {
+      "name": "Richard Mille RM 11-03",
+      "description": "A masterpiece of engineering, featuring a flyback chronograph and carbon TPT case.",
+      "price": "350000.00",
+      "discount_price": "420000.00",
+      "image": "https://images.richardmille.com/rm11-03.jpg",
+      "category": "Richard Mille"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 7,
+    "fields": {
+      "name": "Rolex GMT-Master II 'Pepsi'",
+      "description": "Iconic red and blue ceramic bezel paired with a Jubilee bracelet.",
+      "price": "10900.00",
+      "discount_price": "21000.00",
+      "image": "https://images.rolex.com/gmt-pepsi.jpg",
+      "category": "Rolex"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 8,
+    "fields": {
+      "name": "Audemars Piguet Royal Oak Offshore",
+      "description": "A bolder, more rugged take on the classic Royal Oak with chronograph functions.",
+      "price": "38000.00",
+      "discount_price": "44000.00",
+      "image": "https://images.audemarspiguet.com/offshore.jpg",
+      "category": "Audemars Piguet"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 9,
+    "fields": {
+      "name": "Rolex Day-Date 40 'President'",
+      "description": "Crafted in 18ct yellow gold with the iconic President bracelet and fluted bezel.",
+      "price": "38500.00",
+      "discount_price": "42000.00",
+      "image": "https://images.rolex.com/day-date-gold.jpg",
+      "category": "Rolex"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 10,
+    "fields": {
+      "name": "Patek Philippe Aquanaut",
+      "description": "The modern sports watch with a composite tropical strap and embossed dial.",
+      "price": "24000.00",
+      "discount_price": "68000.00",
+      "image": "https://images.patek.com/aquanaut.jpg",
+      "category": "Patek Philippe"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 11,
+    "fields": {
+      "name": "Rolex Sky-Dweller Blue",
+      "description": "The most complex Rolex movement, featuring an annual calendar and dual time zone.",
+      "price": "15650.00",
+      "discount_price": "24500.00",
+      "image": "https://images.rolex.com/sky-dweller-blue.jpg",
+      "category": "Rolex"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 12,
+    "fields": {
+      "name": "A. Lange & Söhne Lange 1",
+      "description": "German perfection featuring an off-center dial and a massive outsize date.",
+      "price": "44000.00",
+      "discount_price": "48000.00",
+      "image": "https://images.alange-soehne.com/lange-1.jpg",
+      "category": "A. Lange & Söhne"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 13,
+    "fields": {
+      "name": "Cartier Santos Dumont",
+      "description": "The first true pilot's watch, featuring an elegant square case and exposed screws.",
+      "price": "6800.00",
+      "discount_price": "7500.00",
+      "image": "https://images.cartier.com/santos-dumont.jpg",
+      "category": "Cartier"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 14,
+    "fields": {
+      "name": "Richard Mille RM 35-02 Rafael Nadal",
+      "description": "Ultra-lightweight watch designed to withstand extreme shocks on the tennis court.",
+      "price": "220000.00",
+      "discount_price": "285000.00",
+      "image": "https://images.richardmille.com/rm35-02.jpg",
+      "category": "Richard Mille"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 15,
+    "fields": {
+      "name": "Omega Speedmaster 'Moonwatch'",
+      "description": "The first watch worn on the moon, featuring the Hesalite crystal and Calibre 3861.",
+      "price": "7000.00",
+      "discount_price": "7800.00",
+      "image": "https://images.omega.com/speedy-moonwatch.jpg",
+      "category": "Omega"
+    }
+  }
+]

@@ -1,0 +1,266 @@
+{% extends 'myapp/base.html' %} {% block content %}
+
+<div
+  class="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+>
+  <div class="max-w-2xl w-full space-y-8">
+    <!-- Back Button -->
+    <div>
+      <a
+        href="{% url 'myapp:index' %}"
+        class="inline-flex items-center text-orange-600 hover:text-orange-800 font-semibold transition duration-300 group"
+      >
+        <svg
+          class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+          ></path>
+        </svg>
+        Back to Menu
+      </a>
+    </div>
+
+    <!-- Header -->
+    <div class="text-center animate-fade-in">
+      <div
+        class="mx-auto w-16 h-16 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full flex items-center justify-center mb-4 shadow-lg"
+      >
+        <svg
+          class="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+          ></path>
+        </svg>
+      </div>
+      <h2 class="text-4xl font-extrabold text-gray-900 mb-2">Add New Item</h2>
+      <p class="text-sm text-gray-600">Create a new food item for your menu</p>
+    </div>
+
+    <!-- Create Card -->
+    <div
+      class="bg-white rounded-2xl shadow-xl p-8 space-y-6 border border-gray-100 animate-slide-up"
+    >
+      <form method="POST" enctype="multipart/form-data" class="space-y-5">
+        {% csrf_token %}
+
+        <!-- Form Fields -->
+        {% for field in form %}
+        <div
+          class="space-y-2 animate-slide-right"
+          style="animation-delay: {{ forloop.counter }}00ms;"
+        >
+          <label
+            for="{{ field.id_for_label }}"
+            class="block text-sm font-semibold text-gray-700"
+          >
+            {{ field.label }} {% if field.field.required %}
+            <span class="text-red-500">*</span>
+            {% endif %}
+          </label>
+
+          <!-- Input Field -->
+          <div class="relative">{{ field }}</div>
+
+          <!-- Help Text -->
+          {% if field.help_text %}
+          <p class="text-xs text-gray-500 mt-1">{{ field.help_text|safe }}</p>
+          {% endif %}
+
+          <!-- Errors -->
+          {% if field.errors %} {% for error in field.errors %}
+          <p class="text-xs text-red-600 mt-1 font-medium flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            {{ error }}
+          </p>
+          {% endfor %} {% endif %}
+        </div>
+        {% endfor %}
+
+        <!-- Info Box -->
+        <div
+          class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 border border-blue-100 animate-slide-right"
+          style="animation-delay: 500ms"
+        >
+          <div class="flex items-start">
+            <svg
+              class="w-5 h-5 text-blue-600 mt-0.5 mr-3"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <div>
+              <p class="text-sm font-semibold text-blue-900">Quick Tip</p>
+              <p class="text-xs text-blue-700 mt-1">
+                Make sure to fill in all required fields marked with
+                <span class="text-red-500">*</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Buttons -->
+        <div
+          class="flex flex-col sm:flex-row gap-4 pt-4 animate-slide-right"
+          style="animation-delay: 600ms"
+        >
+          <button
+            type="submit"
+            class="flex-1 bg-gradient-to-r from-orange-600 to-pink-600 text-white font-bold py-3 px-4 rounded-lg hover:from-orange-700 hover:to-pink-700 transform transition duration-200 hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 group"
+          >
+            <span class="inline-flex items-center justify-center">
+              <svg
+                class="w-5 h-5 mr-2 transform group-hover:rotate-90 transition duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                ></path>
+              </svg>
+              Create Item
+            </span>
+          </button>
+
+          <a
+            href="{% url 'myapp:index' %}"
+            class="flex-1 bg-gray-200 text-gray-700 font-bold py-3 px-4 rounded-lg hover:bg-gray-300 transform transition duration-200 hover:scale-105 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 text-center"
+          >
+            Cancel
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Additional Info -->
+    <p
+      class="text-center text-xs text-gray-500 animate-fade-in"
+      style="animation-delay: 700ms"
+    >
+      Your new item will be added to the menu immediately after creation
+    </p>
+  </div>
+</div>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-right {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .animate-slide-right {
+    animation: slide-right 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  /* Custom styling for Django form inputs */
+  input[type="text"],
+  input[type="number"],
+  input[type="file"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    background-color: #f9fafb;
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="file"]:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: #f97316;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+  }
+
+  input[type="text"]:hover,
+  input[type="number"]:hover,
+  input[type="file"]:hover,
+  textarea:hover,
+  select:hover {
+    border-color: #d1d5db;
+    background-color: white;
+  }
+
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  ul.errorlist {
+    display: none;
+  }
+</style>
+
+{% endblock %}

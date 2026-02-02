@@ -1,0 +1,519 @@
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+fetching all items from database
+Found 18 items in the database
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+fetching item from database
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+fetching item 6 from database
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+fetching item 6 from database
+Found item Chicken Tacos ($7.29)
+fetching item 70 from database
+Error fetching item 70: Item matching query does not exist.
+Internal Server Error: /myapp/70/
+Traceback (most recent call last):
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py", line 47, in detail
+    item = Item.objects.get(id=id)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\db\models\query.py", line 635, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+myapp.models.Item.DoesNotExist: Item matching query does not exist.
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+fetching item 70 from database
+Error fetching item 70: No Item matches the given query.
+Not Found: /myapp/70/
+fetching item 7 from database
+Found item Sushi Platter ($12.99)
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+fetching item 70 from database
+Error fetching item 70: No Item matches the given query.
+Not Found: /myapp/70/
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+fetching item 70 from database
+Error fetching item 70: No Item matches the given query.
+Not Found: /myapp/70/
+fetching all items from database
+User ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+fetching all items from database
+User [2026-01-30T08:17:59.992806+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+Not Found: /favicon.ico
+fetching all items from database
+User [2026-01-30T08:33:16.652143+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+Not Found: /favicon.ico
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+fetching all items from database
+User [2026-01-30T08:37:45.716877+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:39:05.516217+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:39:27.571530+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:40:23.892686+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:43:20.745089+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:46:34.614302+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:47:15.434134+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:50:05.438635+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:59:19.757750+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:59:27.212040+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T08:59:32.151445+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:04:21.190413+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+Internal Server Error: /myapp/
+Traceback (most recent call last):
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\defaulttags.py", line 1035, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'custom_filters'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\views\decorators\vary.py", line 31, in _view_wrapper
+    response = func(request, *args, **kwargs)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py", line 43, in index
+    return render(request, 'myapp/index.html', context)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\defaulttags.py", line 1097, in load
+    lib = find_library(parser, name)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\defaulttags.py", line 1037, in find_library
+    raise TemplateSyntaxError(
+    ...<5 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: 'custom_filters' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+Watching for file changes with StatReloader
+fetching all items from database
+User [2026-01-30T09:05:11.140376+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+Internal Server Error: /myapp/
+Traceback (most recent call last):
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\views\decorators\vary.py", line 31, in _view_wrapper
+    response = func(request, *args, **kwargs)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py", line 43, in index
+    return render(request, 'myapp/index.html', context)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\env\Lib\site-packages\django\template\base.py", line 749, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\templatetags\custom_filters.py", line 7, in currency
+    return f"${value:,.2f}"
+              ^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'SafeString'
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\templatetags\custom_filters.py changed, reloading.
+Watching for file changes with StatReloader
+fetching all items from database
+User [2026-01-30T09:08:50.885461+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\templatetags\custom_filters.py changed, reloading.
+Watching for file changes with StatReloader
+fetching all items from database
+User [2026-01-30T09:09:58.295273+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:10:22.042386+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\templatetags\custom_filters.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\templatetags\custom_filters.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\templatetags\custom_filters.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+fetching all items from database
+User [2026-01-30T09:18:38.780974+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:18:52.648804+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:19:11.204426+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:19:27.071236+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:19:44.937864+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:19:56.899511+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:20:06.561224+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:20:16.263499+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:20:29.775621+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+fetching all items from database
+User [2026-01-30T09:21:01.002699+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\urls.py changed, reloading.
+Watching for file changes with StatReloader
+fetching all items from database
+User [2026-01-30T09:28:09.633340+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+fetching all items from database
+User [2026-01-30T09:30:35.915209+00:00]ThatoAdmin requested item list from 127.0.0.1
+Found 18 items in the database
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Thato\Documents\Udemy\django\pro\mysite\myapp\forms.py changed, reloading.
+Watching for file changes with StatReloader

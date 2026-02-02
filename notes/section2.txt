@@ -1,0 +1,185 @@
+♦ We might end up using Flask & FastAPI
+
+## Introduction to Django ##
+- high level python framework
+    - no need to worry about the lowlevel details of the development
+
+- comes with many built-in tools
+    - authentication
+    - user management
+    - database management
+    - file upload
+
+- Django is a python framework
+    - the source code for django is written in python
+
+- Follows the MVT (Model-View-Template) architecture
+    - Model: the data structure
+    - View: the business logic
+    - Template: the presentation
+
+- Scallable:
+    - can handle large amounts of traffic
+    - can handle large amounts of users
+    - can handle large amounts of requests
+
+- Secure apps
+    - built-in security features
+    - authentication
+    - authorization
+    - encryption
+    - protection against common web vulnerabilities
+
+♦ Emphasizes rapid development
+    - built-in tools for common tasks
+    - less code to write
+    - less time to develop
+    - less time to debug
+    - less time to maintain
+
+- Flexible
+    - can be used for any type of application
+    - can be used for any type of project
+    - can be used for any type of website
+    - can be used for any type of mobile app
+    - can be used for any type of desktop app
+    - can be used for any type of game
+    - can be used for any type of server
+    - can be used for any type of client
+    - can be used for any type of database
+    - can be used for any type of API
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any type of web application
+    - can be used for any type of web site
+    - can be used for any type of web service
+    - can be used for any
+

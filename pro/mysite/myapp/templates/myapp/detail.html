@@ -1,0 +1,208 @@
+{% extends 'myapp/base.html' %} {% block content %}
+
+<div
+  class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-12 px-4"
+>
+  <!-- Back Button -->
+  <div class="max-w-6xl mx-auto mb-6">
+    <a
+      href="{% url 'myapp:index' %}"
+      class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition duration-300 group"
+    >
+      <svg
+        class="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition duration-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M10 19l-7-7m0 0l7-7m-7 7h18"
+        ></path>
+      </svg>
+      Back to Menu
+    </a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-6xl mx-auto">
+    <div
+      class="bg-white rounded-3xl shadow-2xl overflow-hidden animate-fade-in"
+    >
+      <div class="md:flex">
+        <!-- Image Section -->
+        <div class="md:w-1/2 relative overflow-hidden group">
+          <img
+            src="{{ item.item_image }}"
+            alt="{{ item.item_name }}"
+            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"
+          />
+          <!-- Overlay on Hover -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"
+          ></div>
+        </div>
+
+        <!-- Details Section -->
+        <div class="md:w-1/2 p-10 space-y-6">
+          <!-- Item Name -->
+          <div>
+            <span
+              class="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+            >
+              Food Item
+            </span>
+            <h1
+              class="text-4xl font-extrabold text-gray-900 mb-2 animate-slide-right"
+            >
+              {{ item.item_name }}
+            </h1>
+          </div>
+
+          <!-- Price Badge -->
+          <div
+            class="flex items-center space-x-3 animate-slide-right"
+            style="animation-delay: 100ms"
+          >
+            <div
+              class="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold text-3xl px-6 py-3 rounded-xl shadow-lg"
+            >
+              ${{ item.item_price }}
+            </div>
+            <span class="text-gray-500 text-sm">per item</span>
+          </div>
+
+          <!-- Description -->
+          <div
+            class="border-t border-gray-200 pt-6 animate-slide-right"
+            style="animation-delay: 200ms"
+          >
+            <h3 class="text-lg font-semibold text-gray-700 mb-3">
+              Description
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              {{ item.item_description }}
+            </p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 pt-6 animate-slide-right"
+            style="animation-delay: 300ms"
+          >
+            {% comment %} {% if item.user_name == request.user %} {% endcomment %}
+            <a
+              href="{% url 'myapp:item_update_form' item.id %}"
+              class="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl text-center group"
+            >
+              <span class="inline-flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 transform group-hover:rotate-12 transition duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                  ></path>
+                </svg>
+                Edit Item
+              </span>
+            </a>
+
+            <a
+              href="{% url 'myapp:item_confirm_delete' item.id %}"
+              class="flex-1 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-4 px-6 rounded-xl hover:from-red-700 hover:to-red-800 transform hover:scale-105 transition duration-300 shadow-lg hover:shadow-xl text-center group"
+            >
+              <span class="inline-flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 transform group-hover:scale-125 transition duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  ></path>
+                </svg>
+                Delete Item
+              </span>
+            </a>
+            {% comment %} {% endif %} {% endcomment %}
+          </div>
+
+          <!-- Additional Info -->
+          <div
+            class="bg-blue-50 rounded-xl p-4 border border-blue-100 animate-slide-right"
+            style="animation-delay: 400ms"
+          >
+            <div class="flex items-start">
+              <svg
+                class="w-5 h-5 text-blue-600 mt-0.5 mr-3"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <div>
+                <p class="text-sm font-semibold text-blue-900">
+                  Item Management
+                </p>
+                <p class="text-xs text-blue-700 mt-1">
+                  You can edit or delete this item using the buttons above
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slide-right {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .animate-slide-right {
+    animation: slide-right 0.6s ease-out forwards;
+    opacity: 0;
+  }
+</style>
+
+{% endblock %}

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product_object.name }} | Luxury Collection</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    
+    <style>
+      :root {
+        --luxury-dark: #0a0a0a;
+        --luxury-gold: #d4a574;
+        --luxury-light: #f5f3f0;
+        --luxury-white: #ffffff;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f5f3f0 0%, #e8e4df 100%);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+      }
+
+      /* Premium Header */
+      .premium-detail-header {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        padding: 20px 0;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      }
+
+      .premium-detail-header .brand {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--luxury-gold);
+        letter-spacing: 2px;
+      }
+
+      .premium-detail-header .back-link {
+        color: var(--luxury-gold);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .premium-detail-header .back-link:hover {
+        color: #e6b886;
+        text-decoration: underline;
+      }
+
+      /* Product Image Gallery */
+      .product-gallery {
+        position: relative;
+      }
+
+      .product-gallery-main {
+        background: var(--luxury-white);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        padding: 20px;
+      }
+
+      .product-gallery-main img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        display: block;
+      }
+
+      .gallery-badge {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        background: linear-gradient(135deg, #d4a574 0%, #b8904a 100%);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Product Details Card */
+      .product-details-card {
+        background: var(--luxury-white);
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        height: 100%;
+      }
+
+      .product-details-card .product-name {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--luxury-dark);
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .product-details-card .product-category {
+        display: inline-block;
+        background: #f0f0f0;
+        color: #666;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+
+      /* Price Section */
+      .price-section {
+        border: 2px solid var(--luxury-gold);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 30px;
+        background: linear-gradient(135deg, rgba(212, 165, 116, 0.05) 0%, rgba(212, 165, 116, 0.02) 100%);
+      }
+
+      .price-display {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .original-price {
+        font-size: 18px;
+        color: #999;
+        text-decoration: line-through;
+        font-weight: 500;
+      }
+
+      .sale-price {
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--luxury-gold);
+        line-height: 1;
+      }
+
+      .current-price {
+        font-size: 36px;
+        font-weight: 700;
+        color: var(--luxury-dark);
+        line-height: 1;
+      }
+
+      .sale-badge {
+        background: linear-gradient(135deg, #d4a574 0%, #b8904a 100%);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Description Section */
+      .description-section {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #f0f0f0;
+      }
+
+      .description-section h5 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--luxury-dark);
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .description-section p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.8;
+      }
+
+      /* Product Info Grid */
+      .info-grid {
+        margin-bottom: 30px;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+      }
+
+      .info-item i {
+        color: var(--luxury-gold);
+        margin-right: 12px;
+        margin-top: 2px;
+      }
+
+      .info-item span {
+        color: #666;
+        font-size: 14px;
+      }
+
+      /* Action Buttons */
+      .action-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 40px;
+      }
+
+      .btn-add-cart {
+        background: linear-gradient(135deg, #d4a574 0%, #b8904a 100%);
+        border: none;
+        color: white;
+        font-weight: 700;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn-add-cart:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(212, 165, 116, 0.3);
+        color: white;
+        text-decoration: none;
+      }
+
+      .btn-wishlist {
+        background: var(--luxury-dark);
+        border: 2px solid var(--luxury-gold);
+        color: var(--luxury-gold);
+        font-weight: 700;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn-wishlist:hover {
+        background: var(--luxury-gold);
+        color: var(--luxury-dark);
+        text-decoration: none;
+      }
+
+      /* Breadcrumb */
+      .breadcrumb-section {
+        margin-bottom: 30px;
+      }
+
+      .breadcrumb {
+        background: transparent;
+        padding: 0;
+      }
+
+      .breadcrumb-item a {
+        color: var(--luxury-gold);
+        text-decoration: none;
+      }
+
+      .breadcrumb-item a:hover {
+        text-decoration: underline;
+      }
+
+      .breadcrumb-item.active {
+        color: var(--luxury-dark);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .product-details-card {
+          padding: 25px;
+          margin-top: 30px;
+        }
+
+        .product-name {
+          font-size: 24px;
+        }
+
+        .sale-price,
+        .current-price {
+          font-size: 28px;
+        }
+
+        .action-buttons {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- Premium Header -->
+    <div class="premium-detail-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <a href="/" class="back-link">
+              <i class="fas fa-arrow-left"></i> Back to Collection
+            </a>
+          </div>
+          <div class="col-md-6 text-right">
+            <span style="color: var(--luxury-gold); font-weight: 600; font-size: 12px;">
+              <i class="fas fa-crown"></i> EXCLUSIVE LUXURY
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Product Image Gallery -->
+            <div class="col-lg-6">
+                <div class="product-gallery">
+                    <div class="product-gallery-main">
+                        <img src="{{product_object.image}}" alt="{{product_object.name}}" />
+                    </div>
+                    {% if product_object.discount_price %}
+                    <div class="gallery-badge">
+                        <i class="fas fa-percent"></i> EXCLUSIVE OFFER
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-lg-6">
+                <div class="product-details-card">
+                    <!-- Product Name -->
+                    <h1 class="product-name">
+                        {{ product_object.name }}
+                    </h1>
+
+                    <!-- Category -->
+                    <span class="product-category">
+                        <i class="fas fa-tag"></i> Premium Selection
+                    </span>
+
+                    <!-- Price Section -->
+                    <div class="price-section">
+                        <div class="price-display">
+                            {% if product_object.discount_price %}
+                                <span class="original-price">
+                                    R {{ product_object.price }}
+                                </span>
+                                <span class="sale-price">
+                                    R {{ product_object.discount_price }}
+                                </span>
+                                <span class="sale-badge">
+                                    <i class="fas fa-fire"></i> SALE
+                                </span>
+                            {% else %}
+                                <span class="current-price">
+                                    R {{ product_object.price }}
+                                </span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="description-section">
+                        <h5>Product Details</h5>
+                        <p>
+                            {{ product_object.description }}
+                        </p>
+                    </div>
+
+                    <!-- Product Information -->
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Authentic & Verified</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <span>Fast & Secure Delivery</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-undo"></i>
+                            <span>Easy Returns & Exchange</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Buyer Protection Guaranteed</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn-add-cart" type="button">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                        <button class="btn-wishlist" type="button">
+                            <i class="fas fa-heart"></i> Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

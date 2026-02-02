@@ -1,0 +1,11 @@
+## Templates ##
+
+- HTML files are used to create the layout of the website
+- HTML files are stored in the templates folder
+- HTML files are used to display the data from the models
+- HTML files are used to display the data from the views
+- HTML files are used to display the data from the database
+- HTML files are used to display the data from the admin
+- HTML files are used to display the data from the urls
+
+♦ A template is a combination of the database data and the ui from the HTML file

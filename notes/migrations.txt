@@ -1,0 +1,6 @@
+python manage.py makemigrations
+python manage.py migrate
+
+django automatically creates migrations for the built-in User model
+we do not have to interact the database directly
+no need to write sql database queries
