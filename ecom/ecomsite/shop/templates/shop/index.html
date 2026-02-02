@@ -325,11 +325,14 @@
                 {% endif %}
               </div>
 
+              
               <div class="card-actions">
+                <!-- View Button -->
                 <a href="/{{product.id}}/" class="btn btn-view">
                   <i class="fas fa-eye"></i> View
                 </a>
-                <button class="btn btn-cart atc">
+                <!-- Add to Cart Button -->
+                <button id="{{product.id}}" class="btn btn-cart atc">
                   <i class="fas fa-shopping-bag"></i>
                 </button>
               </div>
@@ -409,7 +412,10 @@
     }
 
     $(document).on('click', '.atc', function(){
-      console.log("Add to cart button clicked");
+      console.log("Add to Cart button clicked");
+      var item_id = this.id.toString();
+      console.log( item_id);
     })
+    
   </script>
 </html>
