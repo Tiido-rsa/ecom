@@ -329,7 +329,7 @@
                 <a href="/{{product.id}}/" class="btn btn-view">
                   <i class="fas fa-eye"></i> View
                 </a>
-                <button class="btn btn-cart">
+                <button class="btn btn-cart atc">
                   <i class="fas fa-shopping-bag"></i>
                 </button>
               </div>
@@ -399,9 +399,17 @@
 
     console.log("Welcome to Luxury Collection - Premium Ecommerce!");
 
+    // CHECK IF CART IS EMPTY
     if (localStorage.getItem('cart') === null) {
       var cart = {};
-      
     }
+    else{
+      cart = JSON.parse(localStorage.getItem('cart'));
+      console.log(cart); // DEBUG
+    }
+
+    $(document).on('click', '.atc', function(){
+      console.log("Add to cart button clicked");
+    })
   </script>
 </html>
