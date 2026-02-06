@@ -349,7 +349,7 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="premium-product-card">
             <div class="product-image">
-              <img src="{{product.image}}" alt="Image of {{product.name}}" />
+              <img src="{{product.image}}" alt="Image of {{product.name}}" id="img-{{product.id}}" />
               {% if product.discount_price %}
               <div class="product-badge">ON SALE</div>
               {% endif %}
@@ -364,10 +364,10 @@
 
               <div class="price-section">
                 {% if product.discount_price %}
-                  <span class="original-price">R {{product.price}}</span>
+                  <span class="original-price" id="price{{product.id}}">{{product.price}}</span>
                   <span class="sale-price">R {{product.discount_price}}</span>
                 {% else %}
-                  <span class="current-price">R {{product.price}}</span>
+                  <span class="current-price" id="price{{product.id}}">R {{product.price}}</span>
                 {% endif %}
               </div>
 
@@ -467,13 +467,20 @@
 
         quantity = cart[item_id][0] + 1;
         cart[item_id][0] = quantity;
+        cart[item_id][2] = parseFloat(document.getElementById('price' + item_id).innerHTML);
+        total_price = quantity * cart[item_id][2];
+        cart[item_id][3] = total_price;
+        cart[item_id][4] = document.getElementById('img-' + item_id).src;
         
       }
       else{
 
         quantity = 1;
+        price = parseFloat(document.getElementById('price' + item_id).innerHTML);
+        total_price = quantity * price;
         name = document.getElementById('nm-' + item_id).innerHTML
-        cart[item_id] = [quantity, name];
+        cart[item_id] = [quantity, name, price, total_price];
+        cart[item_id][4] = document.getElementById('img-' + item_id).src;
 
       }
 
@@ -495,52 +502,110 @@
 
     DisplayCart(cart);
 
-    function DisplayCart(cart){
-      var cartString = "";
-      var cartIndex = 1;
+    function DisplayCart(cart) {
+    var cartString = "";
+    var cartIndex = 1;
+    var totalQty = 0;
 
-      cartString += `<h4>You have ${Object.keys(cart).length} item(s) in your cart.</h4>`;
-
-      for(var item in cart){
-        cartString  += cartIndex;
-        cartString  += document.getElementById('nm-' + item).innerHTML + 'Qty: ' + cart[item][0] + '<br>';
-        cartIndex   += 1;
-      }
-
-      document.getElementById('cart').setAttribute('data-content', cartString);
-      $('[data-toggle="popover"]').popover();
+    // 1. Calculate total quantity for the header
+    for (var item in cart) {
+        totalQty += cart[item][0];
     }
+
+    cartString += `<h5>You have ${totalItemsInCart(cart)} items in your cart</h5><hr>`;
+
+    // 2. Build the visual list
+    for (var item in cart) {
+        // Accessing the new array format:
+        // cart[item][0] = Qty, [1] = Name, [4] = Image URL
+        var qty     = cart[item][0];
+        var name    = cart[item][1];
+        var imgUrl  = cart[item][4];
+
+        cartString += `
+            <div class="d-flex align-items-center mb-3">
+                <img src="${imgUrl}" style="width:45px; height:45px; object-fit:cover; border-radius:4px; margin-right:12px; border:1px solid #ddd;">
+                <div style="flex-grow: 1;">
+                    <div style="font-size:13px; font-weight:700; color:var(--luxury-dark); line-height:1.2;">${name}</div>
+                    <div style="font-size:12px; color:#666;">Qty: ${qty}</div>
+                </div>
+            </div>`;
+        cartIndex += 1;
+    }
+
+    // 3. Add Checkout link if cart isn't empty
+    if (Object.keys(cart).length > 0) {
+        cartString += "<hr><a href='/checkout' class='btn btn-dark btn-sm btn-block'>Proceed to Checkout</a>";
+    } else {
+        cartString = "<h5>Your cart is empty</h5>";
+    }
+
+    // 4. Update the actual popover
+    var cartBtn = document.getElementById('cart');
+    cartBtn.setAttribute('data-content', cartString);
+    
+    // Re-initialize the popover to ensure it picks up the HTML and new content
+    $('[data-toggle="popover"]').popover({
+        html: true,
+        trigger: 'focus'
+    });
+}
+
+// Helper function to count total individual items
+function totalItemsInCart(cart) {
+    var total = 0;
+    for (var i in cart) { total += cart[i][0]; }
+    return total;
+}
 
     function updateCartUI() {
-        // Update the Navbar Button Text
-        var totalItems = Object.keys(cart).length;
-        document.getElementById('cart').innerHTML = `Cart (${totalItems})`;
-
-        // Build the Popover Content String
-        var cartString = "<h5>Your Luxury Selection</h5><hr>";
-        var cartIndex = 1;
-
-        for (var item in cart) {
-            var itemNameElement = document.getElementById('nm-' + item);
-            if (itemNameElement) {
-                var itemName = itemNameElement.innerHTML;
-                cartString += `${cartIndex}. ${itemName} | Qty: ${cart[item]}<br>`;
-                cartIndex++;
-            }
-        }
-        
-        if (totalItems === 0) {
-            cartString = "<h5>Your cart is empty</h5>";
-        } else {
-            // Add a Checkout button at the bottom of the popover
-            cartString += "<hr><a href='checkout/' class='btn btn-dark btn-sm btn-block'>Checkout</a>";
-        }
-
-        // Apply content and initialize/refresh popover
-        var cartBtn = $('#cart');
-        cartBtn.attr('data-content', cartString);
-        cartBtn.popover(); 
+    // 1. Calculate Total Quantity (not just types of items)
+    var totalItems = 0;
+    for (var item in cart) {
+        totalItems += cart[item][0]; // Sum up the quantities
     }
+    document.getElementById('cart').innerHTML = `Cart (${totalItems})`;
+
+    // 2. Build the Popover Content String
+    var cartString = "<h5>Your Luxury Selection</h5><hr>";
+    var cartIndex = 1;
+
+    for (var item in cart) {
+        // Accessing the Array data:
+        // cart[item][0] = Quantity
+        // cart[item][1] = Name
+        // cart[item][4] = Image URL
+        var qty = cart[item][0];
+        var name = cart[item][1];
+        var imgUrl = cart[item][4];
+
+        cartString += `
+            <div class="d-flex align-items-center mb-2">
+                <img src="${imgUrl}" style="width:50px; height:50px; object-fit:cover; border-radius:4px; margin-right:10px;">
+                <div>
+                    <div style="font-size:13px; font-weight:600; line-height:1.2;">${name}</div>
+                    <small class="text-muted">Quantity: ${qty}</small>
+                </div>
+            </div>`;
+        cartIndex++;
+    }
+
+    if (totalItems === 0) {
+        cartString = "<h5>Your cart is empty</h5>";
+    } else {
+        cartString += "<hr><a href='/checkout' class='btn btn-dark btn-sm btn-block'>Checkout</a>";
+    }
+
+    // 3. Apply content and refresh
+    var cartBtn = $('#cart');
+    cartBtn.attr('data-content', cartString);
+    
+    // Crucial: dispose and re-initialize to show new content
+    cartBtn.popover('dispose').popover({
+        html: true,
+        trigger: 'focus' // Or 'click'
+    });
+}
 
   </script>
   <!-- End JavaScript -->
