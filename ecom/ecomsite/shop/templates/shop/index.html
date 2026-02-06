@@ -13,6 +13,17 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
@@ -263,7 +274,7 @@
   </head>
   <body>
     <!-- Premium Header -->
-    <div class="premium-header">
+    <!-- <div class="premium-header">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
@@ -276,7 +287,38 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <!-- Navigation Bar -->
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" id="cart" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" 
+                 data-html="true">
+                Cart
+              </button>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
     </div>
+
+    <br>
 
     <div class="container">
       <!-- Premium Search Bar -->
@@ -306,7 +348,7 @@
             </div>
 
             <div class="card-body">
-              <h5 class="card-title">{{product.name}}</h5>
+              <h5 class="card-title" id="nm-{{product.id}}">{{product.name}}</h5>
               
               <div class="category-badge">
                 <i class="fas fa-tag"></i> {{product.category}}
@@ -325,7 +367,7 @@
                 <a href="/{{product.id}}/" class="btn btn-view">
                   <i class="fas fa-eye"></i> View
                 </a>
-                <button class="btn btn-cart">
+                <button class="btn btn-cart atc" id="{{product.id}}">
                   <i class="fas fa-shopping-bag"></i>
                 </button>
               </div>
@@ -339,55 +381,194 @@
         <div class="col-md-12">
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-      <div class="row">
-        <div class="col-md-12">
-          <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
 
-              <!-- Previous Page Link -->
-              {% if product_objects.has_previous %}
-              <li class="page-item">
-                <a class="page-link" href="?page={{ product_objects.previous_page_number }}{% if request.GET.item_name %}&item_name={{ request.GET.item_name }}{% endif %}" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              {% else %}
-              <li class="page-item disabled">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              {% endif %}
+                      <!-- Previous Page Link -->
+                      {% if product_objects.has_previous %}
+                      <li class="page-item">
+                        <a class="page-link" href="?page={{ product_objects.previous_page_number }}{% if request.GET.item_name %}&item_name={{ request.GET.item_name }}{% endif %}" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      {% else %}
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      {% endif %}
               
-              <!-- Page Number Links -->
-              {% for num in product_objects.paginator.page_range %}
-                {% if product_objects.number == num %}
-                  <li class="page-item active"><a class="page-link" href="#">{{ num }}</a></li>
-                {% else %}
-                  <li class="page-item"><a class="page-link" href="?page={{ num }}{% if request.GET.item_name %}&item_name={{ request.GET.item_name }}{% endif %}">{{ num }}</a></li>
-                {% endif %}
-              {% endfor %}
+                      <!-- Page Number Links -->
+                      {% for num in product_objects.paginator.page_range %}
+                        {% if product_objects.number == num %}
+                          <li class="page-item active"><a class="page-link" href="#">{{ num }}</a></li>
+                        {% else %}
+                          <li class="page-item"><a class="page-link" href="?page={{ num }}{% if request.GET.item_name %}&item_name={{ request.GET.item_name }}{% endif %}">{{ num }}</a></li>
+                        {% endif %}
+                      {% endfor %}
 
-              <!-- Next Page Link -->
-              {% if product_objects.has_next %}
-              <li class="page-item">
-                <a class="page-link" href="?page={{ product_objects.next_page_number }}{% if request.GET.item_name %}&item_name={{ request.GET.item_name }}{% endif %}" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-              {% else %}
-              <li class="page-item disabled">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-              {% endif %}
+                      <!-- Next Page Link -->
+                      {% if product_objects.has_next %}
+                      <li class="page-item">
+                        <a class="page-link" href="?page={{ product_objects.next_page_number }}{% if request.GET.item_name %}&item_name={{ request.GET.item_name }}{% endif %}" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                      {% else %}
+                      <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                      {% endif %}
 
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </ul>
           </nav>
-        </div>
-
-    </div>
+        </div>  
+      </div>
      <!-- End Pagination -->
   </body>
+
+  <!-- JavaScript -->
+  <script type="text/javascript">
+    
+    console.log('this is working');
+
+    if(localStorage.getItem('cart') == null){
+      var cart = {};
+    }
+    else{
+      cart = JSON.parse(localStorage.getItem('cart'));
+    }
+
+    $(document).on('click', '.atc', function(){
+      console.log('clicked');
+      var item_id = this.id.toString();
+      console.log(item_id);
+
+      if(cart[item_id] == undefined){
+        cart[item_id] = 1;
+      }
+      else{
+        cart[item_id] = cart[item_id] + 1;
+      }
+
+      // 2. Save the updated cart back to localStorage
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartUI();
+      
+      // 3. Log it HERE to see the changes after the click
+      console.log("Current Cart Content: " + JSON.stringify(cart));
+
+      console.log("Number of items in cart: " + Object.keys(cart).length);
+
+      document.getElementById('cart').innerHTML = `Cart (${Object.keys(cart).length})`;
+
+      
+
+    });
+
+    // $(function () {
+    //   $('[data-toggle="popover"]').popover();
+    //   document.getElementById('cart')
+    //   .setAttribute('data-content', `<h4>You have ${Object.keys(cart).length} item(s) in your cart.</h4>`);
+    // });
+
+    DisplayCart(cart);
+
+    function DisplayCart(cart){
+      var cartString = "";
+      var cartIndex = 1;
+
+      cartString += `<h4>You have ${Object.keys(cart).length} item(s) in your cart.</h4>`;
+
+      for(var item in cart){
+        cartString  += cartIndex;
+        cartString  += document.getElementById('nm-' + item).innerHTML + 'Qty: ' + cart[item] + '<br>';
+        cartIndex   += 1;
+      }
+
+      document.getElementById('cart').setAttribute('data-content', cartString);
+      $('[data-toggle="popover"]').popover();
+    }
+
+    function updateCartUI() {
+        // Update the Navbar Button Text
+        var totalItems = Object.keys(cart).length;
+        document.getElementById('cart').innerHTML = `Cart (${totalItems})`;
+
+        // Build the Popover Content String
+        var cartString = "<h5>Your Luxury Selection</h5><hr>";
+        var cartIndex = 1;
+
+        for (var item in cart) {
+            var itemNameElement = document.getElementById('nm-' + item);
+            if (itemNameElement) {
+                var itemName = itemNameElement.innerHTML;
+                cartString += `${cartIndex}. ${itemName} | Qty: ${cart[item]}<br>`;
+                cartIndex++;
+            }
+        }
+        
+        if (totalItems === 0) {
+            cartString = "<h5>Your cart is empty</h5>";
+        } else {
+            // Add a Checkout button at the bottom of the popover
+            cartString += "<hr><a href='checkout/' class='btn btn-dark btn-sm btn-block'>Checkout</a>";
+        }
+
+        // Apply content and initialize/refresh popover
+        var cartBtn = $('#cart');
+        cartBtn.attr('data-content', cartString);
+        cartBtn.popover(); 
+    }
+
+  </script>
+  <!-- End JavaScript -->
+
+  <!-- CSS -->
+  <style>
+    /* Notification styles */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 15px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      z-index: 10000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      animation: slideIn 0.3s ease;
+    }
+
+    .notification.success {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .notification.error {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+  <!-- End CSS -->
+
 </html>
