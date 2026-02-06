@@ -55,3 +55,8 @@ def checkout(request):
         orders.save()
     
     return render(request, 'shop/checkout.html')
+
+
+def wishlist(request):
+    
+    return render(request, 'shop/wishlist.html')

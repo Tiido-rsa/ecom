@@ -148,7 +148,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="../wishlist/">Wishlist</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">Checkout</a>
@@ -286,6 +286,7 @@
 
   <!-- JavaScript-->
   <script type="text/javascript">
+
     if (localStorage.getItem("cart") === null) {
       var cart = {};
     } else {
@@ -309,7 +310,8 @@
                 ${name}
                 <div>   
                 <span class="badge badge-primary badge-pill">R ${price}</span>
-                </div>
+                <span ><i class="fa fa-trash" id="delete"></i></span>
+                </div>  
             </li>`;
         
       $("#item_list").append(itemString);
@@ -323,5 +325,13 @@
     $("#total").val(total_price);
     $("#item_list").append(totalPriceString);
     $("#items").val(JSON.stringify(cart));
+
+
+    $("#delete").click(function() {
+      let item = $(this).attr("id").split("_")[1];
+      delete cart[item];
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    });
   </script>
 </html>

@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ product_object.name }} | Luxury Collection</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Popper.js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -11,12 +25,18 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Bootstrap JS -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     
     <style>
       :root {
@@ -331,7 +351,7 @@
             <div class="col-lg-6">
                 <div class="product-gallery">
                     <div class="product-gallery-main">
-                        <img src="{{product_object.image}}" alt="{{product_object.name}}" />
+                        <img src="{{product_object.image}}" alt="{{product_object.name}}" id="img-{{product_object.id}}"/>
                     </div>
                     {% if product_object.discount_price %}
                     <div class="gallery-badge">
@@ -345,7 +365,7 @@
             <div class="col-lg-6">
                 <div class="product-details-card">
                     <!-- Product Name -->
-                    <h1 class="product-name">
+                    <h1 class="product-name" id="nm-{{product_object.id}}">
                         {{ product_object.name }}
                     </h1>
 
@@ -359,10 +379,10 @@
                         <div class="price-display">
                             {% if product_object.discount_price %}
                                 <span class="original-price">
-                                    R {{ product_object.price }}
-                                </span>
-                                <span class="sale-price">
                                     R {{ product_object.discount_price }}
+                                </span>
+                                <span class="sale-price" id="price{{product_object.id}}">
+                                    R {{ product_object.price }}
                                 </span>
                                 <span class="sale-badge">
                                     <i class="fas fa-fire"></i> SALE
@@ -405,10 +425,10 @@
 
                     <!-- Action Buttons -->
                     <div class="action-buttons">
-                        <button class="btn-add-cart" type="button">
+                        <button class="btn-add-cart atc" id="{{ product_object.id }}" type="button">
                             <i class="fas fa-shopping-bag"></i> Add to Cart
                         </button>
-                        <button class="btn-wishlist" type="button">
+                        <button class="btn-wishlist" type="button" id="{{ product_object.id }}">
                             <i class="fas fa-heart"></i> Wishlist
                         </button>
                     </div>
@@ -418,4 +438,75 @@
         </div>
     </div>
 </body>
+
+<script type="text/javascript">
+    var cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
+    var wishlist = localStorage.getItem('wishlist') ? JSON.parse(localStorage.getItem('wishlist')) : {};
+
+    $(document).on('click', '.atc', function() {
+        var item_id = this.id.toString(); // If you use id="{{product_object.id}}"
+        
+        // Use .trim() and .replace() to get just the number from "R 15000"
+        var priceElement = document.getElementById('price' + item_id);
+        var priceText = priceElement ? priceElement.innerHTML.replace('R', '').trim() : "0";
+        var price = parseFloat(priceText);
+        
+        var name = document.getElementById('nm-' + item_id).innerHTML.trim();
+        var imgSrc = document.getElementById('img-' + item_id).src;
+
+        if (cart[item_id] != undefined) {
+            var quantity = cart[item_id][0] + 1;
+            cart[item_id][0] = quantity;
+            cart[item_id][3] = quantity * price; // Total price
+        } else {
+            var quantity = 1;
+            var total_price = quantity * price;
+            // Format: [qty, name, unit_price, total_price, image_src]
+            cart[item_id] = [quantity, name, price, total_price, imgSrc];
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Safety check: if you have a navbar on this page, update it
+        var cartBtn = document.getElementById('cart');
+        if (cartBtn) {
+            cartBtn.innerHTML = `Cart (${Object.keys(cart).length})`;
+        }
+        
+        console.log("Updated Cart:", cart);
+    });
+
+    $(document).on('click', '.btn-wishlist', function() {
+    var item_id = $(this).attr('id').toString(); 
+    
+    var name = document.getElementById('nm-' + item_id).innerHTML.trim();
+    var imgSrc = document.getElementById('img-' + item_id).src;
+
+    if (wishlist[item_id] != undefined) {
+        // Toggle feature: Remove if already there
+        delete wishlist[item_id];
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        $(this).html('<i class="far fa-heart"></i> Wishlist'); // Change icon to outline
+        showNotification("Removed from wishlist", "error");
+    } else {
+        // Add to wishlist
+        wishlist[item_id] = [name, imgSrc];
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        $(this).html('<i class="fas fa-heart"></i> Wishlisted'); // Change icon to solid
+        showNotification("Added to your Luxury Wishlist!", "success");
+    }
+    
+    console.log("Updated Wishlist:", wishlist);
+});
+
+// Helper function to show your custom CSS notifications
+function showNotification(message, type) {
+    var note = $(`<div class="notification ${type}">${message}</div>`);
+    $('body').append(note);
+    setTimeout(function() {
+        note.fadeOut(function() { $(this).remove(); });
+    }, 3000);
+}
+</script>
+
 </html>

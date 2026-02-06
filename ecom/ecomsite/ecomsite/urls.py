@@ -8,4 +8,5 @@ urlpatterns = [
     path('<int:pk>/', views.detail, name='detail'),
     path('admin/', admin.site.urls),
     path('checkout/', views.checkout, name='checkout'),
+    path('wishlist/', views.wishlist, name='wishlist'),
 ]

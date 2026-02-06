@@ -300,7 +300,8 @@
     <!-- Navigation Bar -->
     <div class="col-md-12">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Luxury Collection
+</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -310,7 +311,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="wishlist/">Wishlist</a>
             </li>
             <li class="nav-item">
               <button type="button" id="cart" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" 
@@ -364,8 +365,9 @@
 
               <div class="price-section">
                 {% if product.discount_price %}
-                  <span class="original-price" id="price{{product.id}}">{{product.price}}</span>
-                  <span class="sale-price">R {{product.discount_price}}</span>
+                  <span class="original-price" >R {{product.discount_price}}</span>
+                  <span class="sale-price">R</span>
+                  <span class="sale-price" id="price{{product.id}}">{{product.price}}</span>
                 {% else %}
                   <span class="current-price" id="price{{product.id}}">R {{product.price}}</span>
                 {% endif %}
