@@ -1,0 +1,552 @@
+[
+  {
+    "model": "myapp.food",
+    "pk": 1,
+    "fields": {
+      "name": "Peanut Butter & Protein Shake Mix",
+      "calories": 4351,
+      "protein": 112.5,
+      "carbs": 26.7,
+      "fat": 83.7
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 2,
+    "fields": {
+      "name": "Massive Keto Meatloaf with Cheese",
+      "calories": 4018,
+      "protein": 403.5,
+      "carbs": 211.0,
+      "fat": 100.7
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 3,
+    "fields": {
+      "name": "Roasted Chicken and Quinoa Tray",
+      "calories": 4241,
+      "protein": 146.0,
+      "carbs": 145.1,
+      "fat": 58.1
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 4,
+    "fields": {
+      "name": "Sweet Potato and Rice Flour Pasta",
+      "calories": 2941,
+      "protein": 1.3,
+      "carbs": 346.2,
+      "fat": 96.5
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 5,
+    "fields": {
+      "name": "Chickpea Flour (Bulk Portion)",
+      "calories": 4681,
+      "protein": 126.1,
+      "carbs": 435.8,
+      "fat": 92.0
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 6,
+    "fields": {
+      "name": "Sugary Raspberry Lime Sorbet",
+      "calories": 12,
+      "protein": 87.1,
+      "carbs": 402.3,
+      "fat": 180.7
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 7,
+    "fields": {
+      "name": "High-Protein Beef Broth Concentrate",
+      "calories": 1746,
+      "protein": 441.7,
+      "carbs": 12.9,
+      "fat": 144.7
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 8,
+    "fields": {
+      "name": "Whole Grain Cornbread Mix",
+      "calories": 3030,
+      "protein": 0.1,
+      "carbs": 100.8,
+      "fat": 79.4
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 9,
+    "fields": {
+      "name": "Teriyaki Chicken and Rice Bowl",
+      "calories": 1427,
+      "protein": 347.5,
+      "carbs": 46.4,
+      "fat": 16.8
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 10,
+    "fields": {
+      "name": "Lentil and Rice Flour Bread",
+      "calories": 1445,
+      "protein": 268.4,
+      "carbs": 296.3,
+      "fat": 121.1
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 11,
+    "fields": {
+      "name": "Smoked Salmon and Oat Biscuits",
+      "calories": 3351,
+      "protein": 234.5,
+      "carbs": 284.3,
+      "fat": 79.6
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 12,
+    "fields": {
+      "name": "Full-Fat Greek Yogurt Parfait",
+      "calories": 4573,
+      "protein": 273.7,
+      "carbs": 376.6,
+      "fat": 183.3
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 13,
+    "fields": {
+      "name": "Whey Protein and Berry Smoothie",
+      "calories": 3691,
+      "protein": 138.8,
+      "carbs": 417.8,
+      "fat": 146.1
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 14,
+    "fields": {
+      "name": "Double Grass-Fed Beef Patties",
+      "calories": 4318,
+      "protein": 178.8,
+      "carbs": 61.2,
+      "fat": 78.8
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 15,
+    "fields": {
+      "name": "Concentrated Wildflower Honey Glaze",
+      "calories": 3787,
+      "protein": 463.2,
+      "carbs": 215.4,
+      "fat": 75.9
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 16,
+    "fields": {
+      "name": "Glazed Pork Belly with Couscous",
+      "calories": 2078,
+      "protein": 26.7,
+      "carbs": 274.1,
+      "fat": 66.4
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 17,
+    "fields": {
+      "name": "Cheesy Beef Enchilada Casserole",
+      "calories": 4278,
+      "protein": 151.3,
+      "carbs": 464.9,
+      "fat": 97.1
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 18,
+    "fields": {
+      "name": "Deep-Fried Vegetable Potstickers",
+      "calories": 1765,
+      "protein": 168.6,
+      "carbs": 462.2,
+      "fat": 188.6
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 19,
+    "fields": {
+      "name": "Honey Garlic Glazed Pork Ribs",
+      "calories": 95,
+      "protein": 293.6,
+      "carbs": 397.8,
+      "fat": 44.4
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 20,
+    "fields": {
+      "name": "Maple Pecan Oatmeal Cookies",
+      "calories": 845,
+      "protein": 338.8,
+      "carbs": 56.8,
+      "fat": 100.9
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 21,
+    "fields": {
+      "name": "Salted Brazil Nuts (Bulk)",
+      "calories": 2948,
+      "protein": 306.6,
+      "carbs": 329.2,
+      "fat": 106.3
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 22,
+    "fields": {
+      "name": "Seared Scallops with Herb Butter",
+      "calories": 145,
+      "protein": 268.5,
+      "carbs": 21.3,
+      "fat": 13.6
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 23,
+    "fields": {
+      "name": "Chocolate Almond Milk Protein Shake",
+      "calories": 3032,
+      "protein": 99.1,
+      "carbs": 99.5,
+      "fat": 37.9
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 24,
+    "fields": {
+      "name": "Oven-Baked Parmesan Zucchini",
+      "calories": 887,
+      "protein": 108.5,
+      "carbs": 249.0,
+      "fat": 156.3
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 25,
+    "fields": {
+      "name": "Stuffed Peppers with Rice & Turkey",
+      "calories": 1729,
+      "protein": 76.4,
+      "carbs": 85.3,
+      "fat": 77.8
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 26,
+    "fields": {
+      "name": "Pasta with Creamy Chicken Sauce",
+      "calories": 644,
+      "protein": 215.8,
+      "carbs": 377.8,
+      "fat": 86.6
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 27,
+    "fields": {
+      "name": "Roasted Salmon and Brown Rice",
+      "calories": 3040,
+      "protein": 366.5,
+      "carbs": 153.4,
+      "fat": 20.8
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 28,
+    "fields": {
+      "name": "Beef Stew with Hearty Potatoes",
+      "calories": 3793,
+      "protein": 333.0,
+      "carbs": 416.2,
+      "fat": 128.9
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 29,
+    "fields": {
+      "name": "Lamb Curry with Coconut Milk",
+      "calories": 2359,
+      "protein": 470.3,
+      "carbs": 362.5,
+      "fat": 178.2
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 30,
+    "fields": {
+      "name": "Buttery Garlic Smashed Potatoes",
+      "calories": 4945,
+      "protein": 257.2,
+      "carbs": 287.6,
+      "fat": 183.8
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 31,
+    "fields": {
+      "name": "Chicken Fajita Skillet with Tortillas",
+      "calories": 2874,
+      "protein": 56.8,
+      "carbs": 451.6,
+      "fat": 92.7
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 32,
+    "fields": {
+      "name": "Spiced Chili Beans (Canned)",
+      "calories": 1846,
+      "protein": 468.8,
+      "carbs": 297.6,
+      "fat": 95.7
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 33,
+    "fields": {
+      "name": "Creamy Vegetable Korma",
+      "calories": 1221,
+      "protein": 35.4,
+      "carbs": 189.2,
+      "fat": 114.8
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 34,
+    "fields": {
+      "name": "Mixed Nut and Oat Energy Bars",
+      "calories": 1598,
+      "protein": 224.3,
+      "carbs": 180.0,
+      "fat": 78.9
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 35,
+    "fields": {
+      "name": "Spiced Pumpkin Puree Dessert",
+      "calories": 1082,
+      "protein": 373.0,
+      "carbs": 382.5,
+      "fat": 172.1
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 36,
+    "fields": {
+      "name": "Spicy Fermented Kimchi (Large Batch)",
+      "calories": 1,
+      "protein": 403.4,
+      "carbs": 273.3,
+      "fat": 82.0
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 37,
+    "fields": {
+      "name": "Teriyaki Glazed Salmon Fillets",
+      "calories": 2412,
+      "protein": 210.2,
+      "carbs": 177.4,
+      "fat": 27.6
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 38,
+    "fields": {
+      "name": "Sweetened Rice Flour Porridge",
+      "calories": 1030,
+      "protein": 2.1,
+      "carbs": 377.7,
+      "fat": 11.6
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 39,
+    "fields": {
+      "name": "Oven-Baked Thin Potato Chips",
+      "calories": 2362,
+      "protein": 120.9,
+      "carbs": 346.2,
+      "fat": 30.5
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 40,
+    "fields": {
+      "name": "Fried Tofu with Sweet Chili Sauce",
+      "calories": 544,
+      "protein": 229.0,
+      "carbs": 377.2,
+      "fat": 95.7
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 41,
+    "fields": {
+      "name": "Bolognese Pasta with Minced Beef",
+      "calories": 2669,
+      "protein": 16.9,
+      "carbs": 166.5,
+      "fat": 54.1
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 42,
+    "fields": {
+      "name": "Garlic Grilled Halloumi Cheese",
+      "calories": 2821,
+      "protein": 88.5,
+      "carbs": 267.1,
+      "fat": 39.1
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 43,
+    "fields": {
+      "name": "Grilled Chicken and Pasta Bake",
+      "calories": 4404,
+      "protein": 473.8,
+      "carbs": 183.5,
+      "fat": 162.0
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 44,
+    "fields": {
+      "name": "Cheesy Potato and Bacon Casserole",
+      "calories": 4840,
+      "protein": 16.9,
+      "carbs": 268.1,
+      "fat": 81.5
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 45,
+    "fields": {
+      "name": "Sweetened Cranberry Juice Blend",
+      "calories": 733,
+      "protein": 104.7,
+      "carbs": 328.9,
+      "fat": 53.8
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 46,
+    "fields": {
+      "name": "Traditional Stuffed Grape Leaves",
+      "calories": 133,
+      "protein": 117.6,
+      "carbs": 84.7,
+      "fat": 24.6
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 47,
+    "fields": {
+      "name": "Peanut Butter & Honey Granola",
+      "calories": 4049,
+      "protein": 61.7,
+      "carbs": 432.5,
+      "fat": 199.5
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 48,
+    "fields": {
+      "name": "Chocolate Coconut Protein Balls",
+      "calories": 1462,
+      "protein": 182.2,
+      "carbs": 473.0,
+      "fat": 16.0
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 49,
+    "fields": {
+      "name": "Savory Quiche with Whole Milk",
+      "calories": 677,
+      "protein": 299.7,
+      "carbs": 292.6,
+      "fat": 104.8
+    }
+  },
+  {
+    "model": "myapp.food",
+    "pk": 50,
+    "fields": {
+      "name": "High-Protein Black Bean Spaghetti",
+      "calories": 3973,
+      "protein": 424.5,
+      "carbs": 455.8,
+      "fat": 64.4
+    }
+  }
+]

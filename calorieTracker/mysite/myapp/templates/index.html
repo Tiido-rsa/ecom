@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .navbar { background: #28a745; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card { border: none; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .table thead { background-color: #e9ecef; }
+        .btn-add { border-radius: 20px; padding-left: 25px; padding-right: 25px; }
+        .stats-header { color: #495057; font-weight: 700; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark mb-5">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">🥗 Calorie Tracker</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card p-4">
+                    <h4 class="stats-header mb-4">Add Consumed Item</h4>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-2">
+                                <label for="food_consumed" class="form-label mb-0 fw-bold">Select Food</label>
+                            </div>
+                            <div class="col-md-7">
+                                <select name="food_consumed" id="food_consumed" class="form-select border-primary-subtle">
+                                    <option value="" selected disabled>Choose from your database...</option>
+                                    {% for food in foods %}
+                                        <option value="{{ food.name }}">{{ food.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-success btn-add w-100">Add to Log</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <div class="card p-4 h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="stats-header m-0">Today's Consumption</h4>
+                        <span class="badge bg-primary rounded-pill">{{ consumes|length }} Items</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle" id="table">
+                            <thead>
+                                <tr>
+                                    <th>Food Item</th>
+                                    <th class="text-center">Cals</th>
+                                    <th class="text-center">Protein</th>
+                                    <th class="text-center">Carbs</th>
+                                    <th class="text-center">Fat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for consume in consumes %}
+                                    <tr>
+                                        <td class="fw-medium text-dark">{{ consume.food.name }}</td>
+                                        <td class="text-center text-danger fw-bold">{{ consume.food.calories }}</td>
+                                        <td class="text-center text-muted">{{ consume.food.protein }}g</td>
+                                        <td class="text-center text-muted">{{ consume.food.carbs }}g</td>
+                                        <td class="text-center text-muted">{{ consume.food.fat }}g</td>
+                                    </tr>
+                                {% empty %}
+                                    <tr>
+                                        <td colspan="5" class="text-center text-muted py-4">No food logged for today yet.</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="card p-4 border-start border-success border-4">
+                    <h4 class="stats-header mb-3">Macro Summary</h4>
+                    <p class="small text-muted mb-4">Keep an eye on your daily intake balance.</p>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-bold">Daily Calorie Goal</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <ul class="list-group list-group-flush mt-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            Protein Total <span class="badge bg-info text-dark">85g</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            Carbs Total <span class="badge bg-warning text-dark">120g</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            Fat Total <span class="badge bg-danger">45g</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<script type="text/javascript">
+
+    // calculating total calories, protein, carbs and fat
+    var table       = document.getElementById('table');
+    var carbs       = 0;
+    var protein     = 0;
+    var fat         = 0;
+    var calories    = 0;
+
+    for (var i = 1; i < table.rows.length - 1; i++) {
+        console.log(table.rows[i].cells[1].innerHTML);
+        calories    += parseFloat(table.rows[i].cells[1].innerHTML);
+        protein     += parseFloat(table.rows[i].cells[2].innerHTML);
+        carbs       += parseFloat(table.rows[i].cells[3].innerHTML);
+        fat         += parseFloat(table.rows[i].cells[4].innerHTML);
+    }
+
+</script>
+
+</html>
