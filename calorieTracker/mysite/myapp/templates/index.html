@@ -72,7 +72,7 @@
                                 {% for consume in consumes %}
                                     <tr>
                                         <td class="fw-medium text-dark">{{ consume.food.name }}</td>
-                                        <td class="text-center text-danger fw-bold">{{ consume.food.calories }}</td>
+                                        <td class="text-center text-danger fw-bold">{% widthratio consume.food.calories 10 1 %}</td>
                                         <td class="text-center text-muted">{{ consume.food.protein }}g</td>
                                         <td class="text-center text-muted">{{ consume.food.carbs }}g</td>
                                         <td class="text-center text-muted">{{ consume.food.fat }}g</td>
@@ -91,27 +91,37 @@
             <div class="col-lg-4 mb-4">
                 <div class="card p-4 border-start border-success border-4">
                     <h4 class="stats-header mb-3">Macro Summary</h4>
-                    <p class="small text-muted mb-4">Keep an eye on your daily intake balance.</p>
                     
                     <div class="mb-3">
                         <div class="d-flex justify-content-between mb-1">
                             <span class="fw-bold">Daily Calorie Goal</span>
-                            <span>75%</span>
+                            <span id="calorie_percent">0%</span>
                         </div>
                         <div class="progress" style="height: 10px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                            <div id="calorie_progress" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">Set Daily Calorie Goal</label>
+                        <div class="input-group">
+                            <input type="number" id="calories_input" class="form-control" placeholder="2000" value="2000">
+                            <button onclick="updateDashboard()" class="btn btn-primary" type="button">Update</button>
                         </div>
                     </div>
 
                     <ul class="list-group list-group-flush mt-3">
                         <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            Protein Total <span class="badge bg-info text-dark">85g</span>
+                            Total Calories <span id="total_calories" class="badge bg-danger">0</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            Carbs Total <span class="badge bg-warning text-dark">120g</span>
+                            Protein Total <span id="total_protein" class="badge bg-info text-dark">0g</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                            Fat Total <span class="badge bg-danger">45g</span>
+                            Carbs Total <span id="total_carbs" class="badge bg-warning text-dark">0g</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                            Fat Total <span id="total_fat" class="badge bg-danger">0g</span>
                         </li>
                     </ul>
                 </div>
@@ -123,22 +133,60 @@
 </body>
 
 <script type="text/javascript">
+    // 1. We wrap everything in a function so it can be called multiple times
+    function updateDashboard() {
+        var table = document.getElementById('table');
+        var carbs = 0, protein = 0, fat = 0, calories = 0;
+        
+        // 2. Get the DYNAMIC value from the input field
+        var calorie_goal = parseFloat(document.getElementById('calories_input').value) || 2000;
 
-    // calculating total calories, protein, carbs and fat
-    var table       = document.getElementById('table');
-    var carbs       = 0;
-    var protein     = 0;
-    var fat         = 0;
-    var calories    = 0;
+        var rows = table.getElementsByTagName('tbody')[0].rows;
 
-    for (var i = 1; i < table.rows.length - 1; i++) {
-        console.log(table.rows[i].cells[1].innerHTML);
-        calories    += parseFloat(table.rows[i].cells[1].innerHTML);
-        protein     += parseFloat(table.rows[i].cells[2].innerHTML);
-        carbs       += parseFloat(table.rows[i].cells[3].innerHTML);
-        fat         += parseFloat(table.rows[i].cells[4].innerHTML);
+        for (var i = 0; i < rows.length; i++) {
+            if (rows[i].cells.length > 1) {
+                // Since you used widthratio to divide by 10, the JS sees the small number.
+                // If you want the TOTAL to be accurate, we multiply it back by 10.
+                calories += (parseFloat(rows[i].cells[1].innerHTML)) || 0;
+                protein  += parseFloat(rows[i].cells[2].innerHTML) || 0;
+                carbs    += parseFloat(rows[i].cells[3].innerHTML) || 0;
+                fat      += parseFloat(rows[i].cells[4].innerHTML) || 0;
+            }
+        }
+
+        // Rounding
+        calories = Math.round(calories);
+        protein  = protein.toFixed(1);
+        carbs    = carbs.toFixed(1);
+        fat      = fat.toFixed(1);
+
+        // Update Text
+        document.getElementById('total_calories').innerHTML = calories;
+        document.getElementById('total_protein').innerHTML  = protein + "g";
+        document.getElementById('total_carbs').innerHTML    = carbs + "g";
+        document.getElementById('total_fat').innerHTML      = fat + "g";
+
+        // 3. Update Progress Bar based on the NEW goal
+        var percent = (calories / calorie_goal) * 100;
+        
+        // Visual caps and color logic
+        var displayPercent = Math.round(percent);
+        var barWidth = percent > 100 ? 100 : percent;
+        
+        document.getElementById('calorie_percent').innerHTML = displayPercent + "%";
+        document.getElementById('calorie_progress').style.width = barWidth + "%";
+
+        if(percent >= 100) {
+            document.getElementById('calorie_progress').classList.remove('bg-success');
+            document.getElementById('calorie_progress').classList.add('bg-danger');
+        } else {
+            document.getElementById('calorie_progress').classList.remove('bg-danger');
+            document.getElementById('calorie_progress').classList.add('bg-success');
+        }
     }
 
+    // 4. Call the function once on page load so it shows the initial 2000 goal stats
+    window.onload = updateDashboard;
 </script>
 
 </html>
