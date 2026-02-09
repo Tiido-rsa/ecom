@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.name }} - Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        .resume-container {
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 40px;
+        }
+        .header-section {
+            border-bottom: 3px solid #0d6efd;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        .name-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0d6efd;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 15px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        .contact-icon {
+            margin-right: 8px;
+            font-weight: 600;
+            color: #0d6efd;
+        }
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0d6efd;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e9ecef;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .summary-text {
+            line-height: 1.8;
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .education-item {
+            margin-bottom: 25px;
+            padding-left: 0;
+        }
+        .degree {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0d6efd;
+            margin-bottom: 8px;
+        }
+        .school-item {
+            padding: 10px 0;
+            padding-left: 20px;
+            color: #555;
+            font-size: 0.95rem;
+            border-left: 3px solid #0d6efd;
+            margin-bottom: 8px;
+        }
+        .school-item strong {
+            color: #333;
+        }
+        .experience-item, .skills-item {
+            margin-bottom: 20px;
+        }
+        .experience-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .experience-text, .skills-text {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .skills-badge {
+            display: inline-block;
+            background-color: #e7f1ff;
+            color: #0d6efd;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 5px 5px 5px 0;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1 class="name-title">{{ profile.name }}</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>{{ profile.email }}</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span>{{ profile.phone }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        {% if profile.summary %}
+        <div class="summary-section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="summary-text">{{ profile.summary }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Education Section -->
+        {% if profile.degree or profile.university or profile.school %}
+        <div class="education-section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                {% if profile.degree %}
+                <div class="degree">{{ profile.degree }}</div>
+                {% endif %}
+                <div class="school-item">
+                    <strong>University:</strong> {{ profile.university }}
+                </div>
+                <div class="school-item">
+                    <strong>School:</strong> {{ profile.school }}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Experience Section -->
+        {% if profile.experience %}
+        <div class="experience-section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-item">
+                <p class="experience-text">{{ profile.experience }}</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Skills Section -->
+        {% if profile.skills %}
+        <div class="skills-section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-item">
+                <p class="skills-text">{{ profile.skills }}</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
